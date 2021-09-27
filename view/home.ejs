@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="/style1.css">
+      
+    </head>
+    <!-- <body>
+        <h1 id="heading">TODO App</h1>
+        <form action="/" method="POST">
+            <div id="input-div">
+                <div id="discription">
+                   <p>Discription</p><input type="text" name="discription" placeholder="What you want to do....">
+                </div>
+            <div id="bottom-div">
+                <div class="preference a">
+                    <p>catogory</p>
+                   
+                        <select name="preference" id="preference_id">
+                            <option value="#" selected>--Select--</option>
+                            <option value="personal">personal</option>
+                            <option value="Work">Work</option>
+                            <option value="College">College</option>
+                            <option value="Optional">Optional</option>
+                        </select>
+                    
+                </div>
+                <div class="Date a">
+                    <p>Date</p>
+                    <input type="date" name="Date">
+                </div>
+            
+            </div>
+            <div id="add_delete">
+                <button type="submit" class ="add_button b">
+                   <p> ADD TASK </p>
+                </button>
+                
+            </div>
+        </div> 
+        </form>-->
+            <body>
+                <h1 id="heading">TODO App</h1>
+                <div class="card-form">
+                    <form class="signup" action="/" method="POST" >
+                      <div class="form-title">TODO App</div>
+                      <div class="form-body">
+                        <div class="row">
+                            <input type="text" placeholder="Description*" name="discription">
+                          </div>
+                        <div class="row">
+                          <input type="text" placeholder="Preference" name="preference">
+                          <input type="date" placeholder="Deadline*" name="Date">
+                        </div>
+                      </div>
+                      <div class="rule"></div>
+                      <div class="form-footer">
+                        <button type="submit" id="add_button">Add Task<span class="fas fa-plus"></span></button>
+                      </div>
+                    </form>
+                </div>
+                    <div id="list">
+                        <form action="/delete-list" method="POST">
+                            <button type="submit" id="delete_button">Delete<span class="fas fa-trash-alt" ></span></button>
+                      
+                            <%for(let i of to_do) { %>
+                                <div class = "each_list">
+                                    <input type="checkbox" id="A" name="<%= i._id %>">
+                                    <p id = "X"> <%= i.discription %></p>
+                                    <p id = "Y"> <%= i.Date.toDateString() %></p>
+                                    <div id="Z"> <%= i.preference %></div>
+                                </div>
+                                
+                         <% } %>
+                         </form>
+                </div>
+                 
+                 
+    </body>
+</html>
