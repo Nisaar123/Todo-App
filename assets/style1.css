@@ -146,7 +146,7 @@ body{
     width : 40vw ;
     position: relative;
     left : 50% ;
-    bottom : 30vh ;
+    top: 11vh;
 
 }
 .each_list{
@@ -194,7 +194,7 @@ body{
     top: 25px;
     left: 60px;
 }
-//@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
 
 body{
   display: flex;
@@ -213,9 +213,9 @@ body{
   border-radius: 10px;
   background: white;
   box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
-  position: relative;
-  left: 10%;
-  top: 15%;
+  position: fixed;
+   left: 10%;
+   top: 30vh;
   
 }
   
@@ -315,9 +315,9 @@ input[type="text"]{
       color: white;
       font-weight: 600;
       font-family: sans-serif;
-      position: relative;
-      top:35.67vh;
-      right: 23vw;
+      position: fixed;
+      top:58.5vh;
+      left: 27vw;
 } 
 #heading{
     color: #27ae60;
